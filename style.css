@@ -25,7 +25,7 @@ body {
   
 @font-face {
     font-family: mini-wakuwaku;
-    src: url("fonts/mini-wakuwaku.otf");
+    src: url("assets/mini-wakuwaku.otf");
 }
 
 :root {
@@ -42,7 +42,7 @@ body {
   --t-brown: #BD9F8955;
   --t-darkbrown: rgba(121,72,53,0.7);
 
-  --title-font: mini-wakuwaku;
+  --title-font: "mini-wakuwaku";
 
 
 }
