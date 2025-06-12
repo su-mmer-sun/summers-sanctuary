@@ -24,7 +24,7 @@ body {
 }
   
 @font-face {
-    font-family: mini-wakuwaku;
+    font-family: "mini-wakuwaku";
     src: url("assets/mini-wakuwaku.otf");
 }
 
