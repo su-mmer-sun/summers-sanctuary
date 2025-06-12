@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summer's sanctuary ⋆*・ﾟ</title>
+    <link rel="icon" href="https://summers-sanctuary.neocities.org/assets/favicon.png">     
+        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+ <style>
+    body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    
+      @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    #fish {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 500px;
+      z-index: -50; 
+      transform: rotate(270deg);
+      opacity:0.4
+      
+    }
+    </style>
+  </head>
+  
+  
+  
+  <body>
+  
+
+    <h3> say hi to </h3>
+ 
+    <h1><strong>ﾟ・*⋆ summer's sanctuary ⋆*・ﾟ</strong></h1>
+    
+    <h2>take a moment to breathe.</h2>
+    <br>
+    <p>life gets tough sometimes.</p>
+    <p>take a moment to relax in summer's sanctuary!</p>
+    <br>
+    <p> p.s. try clicking for some bubbles 🫧 </p>
+
+    <p style="padding bottom:100px; width=300px">
+    </p>
+    
+    
+<p><img src="assets/bonsai1.png" height="150"> </p>
+
+<!-- deco game // drag and drop -->
+
+<p style="#div1, #div2" {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    border: 1px solid black;
+    display: block;
+    unicode-bidi: isolate;>
+
+<img id="bonsai2" src="assets/bonsai2.png" width="300">
+  <img id="bonsai2" draggable="true">
+<img id= "aquarium" src="assets/aquarium.png" width="500">
+  <img id="aquarium" draggable="true">
+<img id="wabikusa" src="assets/wabikusa.png" width=400>
+  <img id="wabikusa" draggable="true">
+
+<script>
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("img", ev.target.id);
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+ u
+<div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+<div id="div2" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+  <img id="bonsai1" src="assets/bonsai1.png" width="300">
+  <img id="bonsai1" draggable="true">
+  </div>
+  
+</script>
+
+
+
+<!-- credits fishie -->
+
+<div>    
+    <div id="container" style="position:fixed;right:0px;bottom:10px;">
+<img id="toggleImage1" src="https://summers-sanctuary.neocities.org/assets/fish4.png" width="150">
+
+</div>
+   
+   
+  
+  <!-- music record player -->
+  
+  <audio id="cloud-forest" src="https://file.garden/aEpcvTgB2QeyUQNW/cloud%20forest.mp3" loop></audio>
+  <div> 
+<div id="container" style="position:fixed;left:0px;bottom:10px;">
+<img id="toggleImage" src="https://summers-sanctuary.neocities.org/assets/record%20stop.png" width="150" onclick="toggleAudio()">
+
+<script>
+  const audio = document.getElementById("cloud-forest");
+  let isPlaying = false;
+
+  function fadeIn(audio, duration = 1000) {
+    audio.volume = 0;
+    audio.play();
+    let step = 0.05;
+    const interval = setInterval(() => {
+      if (audio.volume < 1) {
+        audio.volume = Math.min(audio.volume + step, 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, duration * step);
+  }
+
+  function fadeOut(audio, duration = 1000) {
+    let step = 0.05;
+    const interval = setInterval(() => {
+      if (audio.volume > 0) {
+        audio.volume = Math.max(audio.volume - step, 0);
+      } else {
+        audio.pause();
+        clearInterval(interval);
+      }
+    }, duration * step);
+  }
+
+  function toggleAudio() {
+    const img = document.getElementById("toggleImage");
+
+    if (!isPlaying) {
+      img.src = "https://summers-sanctuary.neocities.org/assets/record%20play.gif";
+      fadeIn(audio);
+    } else {
+      img.src = "https://summers-sanctuary.neocities.org/assets/record%20stop.png";
+      fadeOut(audio);
+    }
+
+    isPlaying = !isPlaying;
+  }
+</script>
+</div>
+
+
+<!-- fish animation -->
+
+<img id="fish" src="https://summers-sanctuary.neocities.org/assets/fishgif2.gif" width="300" alt="Fish" >
+
+<script>
+  const fish = document.getElementById("fish");
+
+  let x = 0;
+  let y = 0;
+  const speed = 1.0; // pixels per frame, lower is slower
+
+  function animate() {
+    x += speed;
+    y += speed;
+
+    // Wrap around if it goes off screen
+    if (x > window.innerWidth) x = -150;
+    if (y > window.innerHeight) y = -150;
+
+    fish.style.left = x + "px";
+    fish.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+</div>
+
+<!-- water animation -->
+
+<div>
+  <script>
+
+    document.body.addEventListener("click", (e) => {
+      const gif = document.createElement("img");
+      gif.src = "assets/water.gif?t="+ Date.now(); 
+      gif.style.position = "absolute";
+      gif.style.left = `${e.pageX-150}px`;
+      gif.style.top = `${e.pageY-150}px`;
+      gif.style.pointerEvents = "none";
+      gif.style.width = "300px";
+      gif.style.zIndex= "-10"
+ 
+      document.body.appendChild(gif);
+
+      setTimeout(() => {
+        gif.remove();
+      }, 1200);
+    });
+  </script>
+
+</div>
+
+    <!--- random stuff that might be useful??
+    
+    <p>This is a paragraph! Here's how you make a link: <a href="https://neocities.org">Neocities</a>.</p>
+
+    <p>Here's how you can make <strong>bold</strong> and <em>italic</em> text.</p>
+
+    <p>Here's how you can add an image:
+    
+    
+    
+    <p>Here's how to make a list:</p>
+
+    <ul>
+      <li>First thing</li>
+      <li>Second thing</li>
+      <li>Third thing</li>
+    </ul>
+
+    <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p> -->
+
+
+<footer>
+<h4>hope you enjoyed your stay ⋆˙⟡♡ </h4>
+  </footer>  
+  
+
+</body>
+</html>
