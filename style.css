@@ -59,7 +59,7 @@ body {
     background-image: url('assets/lilypad set 1.png'),url('assets/lilypad set 2.png'),url('assets/lilypad3.png'),url('assets/ripples flipped.png'),url('assets/ripples.png'),url('assets/fishtrio.png');
     background-size: 700px,700px,700px,600px,800px;
     background-repeat: no-repeat;
-    background-position:-25% -10%,125% 15%,85% 25%,-15% 20%,130% -10%,-45% 5%;
+    background-position:-15% -10%,125% 15%,85% 25%,-15% 20%,130% -10%,-45% 5%;
     z-index:-1;
     cursor: url('assets/cursor.png'), auto;
   
