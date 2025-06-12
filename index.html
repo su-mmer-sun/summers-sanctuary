@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>summer's sanctuary ⋆*・ﾟ</title>
-    <link rel="icon" href="https://summers-sanctuary.neocities.org/assets/favicon.png">     
+    <link rel="icon" href="assets/favicon.png">     
         <link href="/style.css" rel="stylesheet" type="text/css" media="all">
  <style>
     body {
@@ -101,7 +101,7 @@ function dropHandler(ev) {
 
 <div>    
     <div id="container" style="position:fixed;right:0px;bottom:10px;">
-<img id="toggleImage1" src="https://summers-sanctuary.neocities.org/assets/fish4.png" width="150">
+<img id="toggleImage1" src="assets/fish4.png" width="150">
 
 </div>
    
@@ -112,7 +112,7 @@ function dropHandler(ev) {
   <audio id="cloud-forest" src="https://file.garden/aEpcvTgB2QeyUQNW/cloud%20forest.mp3" loop></audio>
   <div> 
 <div id="container" style="position:fixed;left:0px;bottom:10px;">
-<img id="toggleImage" src="https://summers-sanctuary.neocities.org/assets/record%20stop.png" width="150" onclick="toggleAudio()">
+<img id="toggleImage" src="/assets/record%20stop.png" width="150" onclick="toggleAudio()">
 
 <script>
   const audio = document.getElementById("cloud-forest");
@@ -147,10 +147,10 @@ function dropHandler(ev) {
     const img = document.getElementById("toggleImage");
 
     if (!isPlaying) {
-      img.src = "https://summers-sanctuary.neocities.org/assets/record%20play.gif";
+      img.src = "assets/record%20play.gif";
       fadeIn(audio);
     } else {
-      img.src = "https://summers-sanctuary.neocities.org/assets/record%20stop.png";
+      img.src = "assets/record%20stop.png";
       fadeOut(audio);
     }
 
@@ -162,7 +162,7 @@ function dropHandler(ev) {
 
 <!-- fish animation -->
 
-<img id="fish" src="https://summers-sanctuary.neocities.org/assets/fishgif2.gif" width="300" alt="Fish" >
+<img id="fish" src="assets/fishgif2.gif" width="300" alt="Fish" >
 
 <script>
   const fish = document.getElementById("fish");
