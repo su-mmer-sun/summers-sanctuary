@@ -25,8 +25,7 @@ body {
   
 @font-face {
     font-family: "mini-wakuwaku";
-    src: url("https://github.com/su-mmer-sun/summers-sanctuary/tree/main/assets/mini-wakuwaku.otf" file:"otf"
-);
+    src: url("assets/mini-wakuwaku.otf" file:"otf");
 }
 
 :root {
