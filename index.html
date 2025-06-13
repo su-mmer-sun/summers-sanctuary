@@ -110,14 +110,23 @@ function dropHandler(ev) {
   
   <!-- music record player -->
   
-  <audio id="cloud-forest" src="https://file.garden/aEpcvTgB2QeyUQNW/cloud%20forest.mp3" loop></audio>
-  <div> 
+ <audio id="cloud-forest" src="https://file.garden/aEpcvTgB2QeyUQNW/cloud%20forest.mp3" loop></audio>
+
 <div id="container" style="position:fixed;left:0px;bottom:10px;">
-<img id="toggleImage" src="assets/record stop.png" width="150" onclick="toggleAudio()">
+  <img id="toggleImage" src="assets/record%20stop.png" width="150" onclick="toggleAudio()">
+</div>
 
 <script>
   const audio = document.getElementById("cloud-forest");
+  const img = document.getElementById("toggleImage");
   let isPlaying = false;
+
+  // Preload both images
+  const preloadImages = ["assets/record%20stop.png", "assets/record%20play.gif"];
+  preloadImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
 
   function fadeIn(audio, duration = 1000) {
     audio.volume = 0;
@@ -145,8 +154,6 @@ function dropHandler(ev) {
   }
 
   function toggleAudio() {
-    const img = document.getElementById("toggleImage");
-
     if (!isPlaying) {
       img.src = "assets/record%20play.gif";
       fadeIn(audio);
@@ -154,11 +161,9 @@ function dropHandler(ev) {
       img.src = "assets/record%20stop.png";
       fadeOut(audio);
     }
-
     isPlaying = !isPlaying;
   }
 </script>
-</div>
 
 
 <!-- fish animation -->
